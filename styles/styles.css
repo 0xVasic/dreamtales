@@ -1,0 +1,213 @@
+/* index.html */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 30px 20px 20px 20px;
+  font-family: 'Comfortaa', cursive, Arial, sans-serif;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  color: #5b3e27;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  background: #fff3e6;
+  border-radius: 28px;
+  padding: 24px;
+  box-shadow: 0 12px 25px rgba(252, 182, 159, 0.4);
+  border: 3px solid #ffb997;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+  text-align: center;
+  background: #fff3e6;
+  padding: 20px 15px;
+  font-size: 0.9rem;
+  color: #7a4a00;
+  border-top: 2px solid #ffb997;
+  box-shadow: 0 -4px 15px rgba(252, 182, 159, 0.2);
+  font-family: 'Comfortaa', cursive, Arial, sans-serif;
+  max-width: 1200px;
+  width: 100%;
+  margin: 20px 0 30px 0;
+  border-radius: 15px;
+}
+
+.columns {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.form-wrapper {
+  flex: 1 1 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,244,236,0.6));
+  border: 2px solid rgba(255,185,151,0.35);
+}
+
+h1 {
+  margin: 0 0 6px 0;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #d35d42;
+  text-shadow: 1px 1px 3px #ffb997aa;
+}
+
+.lead {
+  margin: 0 0 14px 0;
+  font-size: 0.98rem;
+  color: #8c5a47;
+  font-style: italic;
+}
+
+label {
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: #a65a43;
+  margin-bottom: 6px;
+  display: block;
+}
+
+input[type="text"],
+select {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 2px solid #ffb997;
+  outline-offset: 2px;
+  transition: border-color 0.2s ease;
+  font-family: 'Comfortaa', cursive;
+  background: white;
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #d35d42;
+  box-shadow: 0 0 8px #d35d42aa;
+}
+
+button.primary {
+  margin-top: 8px;
+  background: linear-gradient(90deg, #d35d42, #ff8a5c);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.05rem;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(211, 93, 66, 0.35);
+}
+
+button.primary:active {
+  transform: translateY(1px);
+}
+
+#rezultat {
+  flex: 1 1 420px;
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 10px 26px rgba(255, 154, 122, 0.2);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-height: 520px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  color: #5b3e27;
+  border: 2px solid #ffb997;
+  min-width: 320px;
+}
+
+#rezime-roditelji {
+  flex: 0 0 300px;
+  background: #ffe6cc;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 8px 20px rgba(255, 168, 85, 0.25);
+  font-size: 0.98rem;
+  line-height: 1.5;
+  max-height: 520px;
+  overflow-y: auto;
+  color: #7a4a00;
+  border: 2px solid #ffb366;
+  min-width: 240px;
+}
+
+#rezime-roditelji h2 {
+  margin-top: 0;
+  font-size: 1.15rem;
+  color: #cc6600;
+  text-align: center;
+}
+
+.bottom-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(0, 0, 0, 0.06);
+  margin-top: 6px;
+}
+
+.bottom-actions label {
+  margin: 0;
+}
+
+.bottom-actions select {
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.share-btn {
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(90deg, #6c4caf, #ff9aa2);
+  color: white;
+  font-weight: 800;
+  box-shadow: 0 6px 18px rgba(108, 76, 175, 0.15);
+}
+
+.share-btn:disabled,
+select:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+@media (max-width: 980px) {
+  .columns {
+    flex-direction: column;
+  }
+  #rezultat,
+  #rezime-roditelji {
+    max-height: 280px;
+  }
+  .bottom-actions {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 8px;
+  }
+}
